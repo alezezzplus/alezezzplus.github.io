@@ -50,6 +50,28 @@
 </head>
 <body>
 
+    <div id="contextMenu" class="context-menu">
+      <div class="context-menu-item"> <a style="color: #fff">Inicio</a></div>
+      <div class="context-menu-item"> <a href="https://docs.off-topic.xyz/" style="color: #fff">Documentacion</a></div>
+      <div class="context-menu-item"> <a href="https://discord.gg/R4phFUz6jF" style="color: #fff">Soporte</a></div>
+      <div class="context-menu-item"> <a href="https://top.gg/bot/875439718802804787" style="color: #fff">Top.gg</a></div>
+  </div>
+  <script>
+      document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+
+    var contextMenu = document.getElementById("contextMenu");
+
+    contextMenu.style.display = "block";
+    contextMenu.style.left = e.clientX + "px";
+    contextMenu.style.top = e.clientY + "px";
+
+    document.addEventListener("click", function () {
+        contextMenu.style.display = "none";
+    }, {once: true});
+});
+  </script>
+
     <div id="pantalla-carga">
         <div class="circulo-carga">&nbsp;</div>
         <h4><b>&nbsp;&nbsp;Loading...</b></h4>
