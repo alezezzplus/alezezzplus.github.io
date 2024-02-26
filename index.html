@@ -1,1 +1,139 @@
-<h1>hola mundo</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Off topic | Fun and More...</title>
+  <link href="website.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+  <link rel="icon" href="https://media.discordapp.net/attachments/1147344140145803274/1173077535286890626/corp_1.png?ex=65e3d797&is=65d16297&hm=c3993eab401badb7bedb735538f0e1f8e9b523e88361659097af228c61817dc5&=&format=webp&quality=lossless" type="image/x-icon">
+  <meta content="Take your maximum potential | Off topic." property="og:title" />
+  <meta content="A great bot with unique and fun qualities, this bot is your best option to moderate and entertain your community, off topic was made with the intention of encouraging the activity of your community and protecting it from threats." property="og:description" />
+  <meta property="og:image" content="https://media.discordapp.net/attachments/1153879870661734440/1187895818062135336/oh_no.png?ex=65e26131&is=65cfec31&hm=ed5e44a250edf182149e85e4b4e9fb2b640f505284b068378f831fbf4b3b581b&=&format=webp&quality=lossless" />
+  <style>
+      img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+            display: none;
+        }
+  </style>
+</head>
+
+<body>
+<div id="contextMenu" class="context-menu">
+      <div class="context-menu-item"> <a style="color: #fff">Inicio</a></div>
+      <div class="context-menu-item"> <a href="https://docs.off-topic.xyz/" style="color: #fff">Documentacion</a></div>
+      <div class="context-menu-item"> <a href="https://discord.gg/R4phFUz6jF" style="color: #fff">Soporte</a></div>
+      <div class="context-menu-item"> <a href="https://top.gg/bot/875439718802804787" style="color: #fff">Top.gg</a></div>
+  </div>
+  <script>
+      document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+
+    var contextMenu = document.getElementById("contextMenu");
+
+    contextMenu.style.display = "block";
+    contextMenu.style.left = e.clientX + "px";
+    contextMenu.style.top = e.clientY + "px";
+
+    document.addEventListener("click", function () {
+        contextMenu.style.display = "none";
+    }, {once: true});
+});
+  </script>
+
+  
+  <div id="pantalla-carga">
+    <div class="circulo-carga"></div> &nbsp;&nbsp;<h4><b>Loading...<br></b></h4>
+</div>
+
+<div id="contenido-externo" style="display: none;">
+</div>
+
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('pantalla-carga').style.display = 'flex';
+
+    fetch('aplication-discord.html')
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById('contenido-externo').innerHTML = html;
+
+        setTimeout(function() {
+            document.getElementById('contenido-externo').style.display = 'block';
+            document.getElementById('pantalla-carga').classList.add('oculto');
+        }, 2000);
+    })
+    .catch(error => {
+        console.error('Error al cargar el contenido:', error);
+    });
+});
+</script>
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+  "palette": {
+  "popup": {
+  "background": "#2b2d31",
+  "text": "#fff"
+  },
+  "button": {
+  "background": "#afed71"
+  }
+  },
+  "content": {
+  "message": "<b>Off topic utiliza cookies para mejorar tu experiencia de miembro.</b>",
+  "link": "Mas informacion.",
+  "dismiss": "¡Entiendo!",
+  "href": "https://docs.off-topic.xyz/politicas/politicas-de-privacidad"
+  }
+  })});
+  </script>
+  
+  <style>
+      #pantalla-carga {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1; 
+            transition: opacity 1s ease-in-out; 
+        }
+
+        #pantalla-carga.oculto {
+            opacity: 0; 
+            pointer-events: none; /* Desactivar eventos de puntero para que no interfiera con la interacción del usuario */
+        }
+
+        .circulo-carga {
+            border: 3px solid #14da28;
+            border-top: 10px solid transparent;
+            border-radius: 50%; 
+            width: 27px; 
+            height: 27px; 
+            animation: girar 1s linear infinite;
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        ::-webkit-scrollbar {width: 10px;}::-webkit-scrollbar-thumb {background-color: #4e5058;border-radius: 9px;/}::-webkit-scrollbar-thumb:hover {background-color: #555;}
+  </style>
+</body>
+
+</html>
