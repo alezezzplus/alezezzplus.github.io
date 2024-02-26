@@ -1,88 +1,74 @@
-<html lang="es" >
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title> Error 404 </title>
-  <link rel="stylesheet" href="./404.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off topic | Fun and More...</title>
+    <link rel="icon" href="https://media.discordapp.net/attachments/1147344140145803274/1173077535286890626/corp_1.png?ex=65e3d797&is=65d16297&hm=c3993eab401badb7bedb735538f0e1f8e9b523e88361659097af228c61817dc5&=&format=webp&quality=lossless" type="image/x-icon">
+    <meta content="Take your maximum potential | Off topic." property="og:title" />
+    <meta content="A great bot with unique and fun qualities, this bot is your best option to moderate and entertain your community, off topic was made with the intention of encouraging the activity of your community and protecting it from threats." property="og:description" />
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1153879870661734440/1187895818062135336/oh_no.png?ex=65e26131&is=65cfec31&hm=84ed5e44a250edf182149e85e4b4e9fb2b640f5052b068378f831fbf4b3b581b&=&format=webp&quality=lossless" />
+
+    <style>
+        #pantalla-carga {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1; 
+            transition: opacity 1s ease-in-out; 
+        }
+
+        #pantalla-carga.oculto {
+            opacity: 0; 
+            pointer-events: none;
+        }
+
+        .circulo-carga {
+            border: 3px solid #14da28;
+            border-top: 10px solid transparent;
+            border-radius: 50%; 
+            width: 27px; 
+            height: 27px; 
+            animation: girar 1s linear infinite;
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-<main>
-  <section class="advice">
-    <h1 class="advice__title">Ooops! Camino equivocado</h1>
-    <p class="advice__description"><span><</span> Error 404 <span>/></span> esta pagina no existe</p>
-  </section>
-  <section class="city-stuff">
-    <ul class="skyscrappers__list">
-      <li class="skyscrapper__item skyscrapper-1"></li>
-      <li class="skyscrapper__item skyscrapper-2"></li>
-      <li class="skyscrapper__item skyscrapper-3"></li>
-      <li class="skyscrapper__item skyscrapper-4"></li>
-      <li class="skyscrapper__item skyscrapper-5"></li>
-    </ul>
-    <ul class="tree__container">
-      <li class="tree__list">
-        <ul class="tree__item tree-1">
-          <li class="tree__trunk"></li>
-          <li class="tree__leaves"></li>
-        </ul>
-        <ul class="tree__item tree-2">
-          <li class="tree__trunk"></li>
-          <li class="tree__leaves"></li>
-        </ul>
-        <ul class="tree__item tree-3">
-          <li class="tree__trunk"></li>
-          <li class="tree__leaves"></li>
-        </ul>  
-        <ul class="tree__item tree-4">
-          <li class="tree__trunk"></li>
-          <li class="tree__leaves"></li>
-        </ul>  
-        <ul class="tree__item tree-5">
-          <li class="tree__trunk"></li>
-          <li class="tree__leaves"></li>
-        </ul>  
-        <ul class="tree__item tree-6">
-          <li class="tree__trunk"></li>
-          <li class="tree__leaves"></li>
-        </ul>  
-        <ul class="tree__item tree-7">
-          <li class="tree__trunk"></li>
-          <li class="tree__leaves"></li>
-        </ul>  
-        <ul class="tree__item tree-8">
-          <li class="tree__trunk"></li>
-          <li class="tree__leaves"></li>
-        </ul>  
-      </li>
-    </ul>
-    <ul class="crane__list crane-1">
-      <li class="crane__item crane-cable crane-cable-1"></li>
-      <li class="crane__item crane-cable crane-cable-2"></li>
-      <li class="crane__item crane-cable crane-cable-3"></li>
-      <li class="crane__item crane-stand"></li>
-      <li class="crane__item crane-weight"></li>
-      <li class="crane__item crane-cabin"></li>
-      <li class="crane__item crane-arm"></li>
-    </ul>
-    <ul class="crane__list crane-2">
-      <li class="crane__item crane-cable crane-cable-1"></li>
-      <li class="crane__item crane-cable crane-cable-2"></li>
-      <li class="crane__item crane-cable crane-cable-3"></li>
-      <li class="crane__item crane-stand"></li>
-      <li class="crane__item crane-weight"></li>
-      <li class="crane__item crane-cabin"></li>
-      <li class="crane__item crane-arm"></li>
-    </ul>
-    <ul class="crane__list crane-3">
-      <li class="crane__item crane-cable crane-cable-1"></li>
-      <li class="crane__item crane-cable crane-cable-2"></li>
-      <li class="crane__item crane-cable crane-cable-3"></li>
-      <li class="crane__item crane-stand"></li>
-      <li class="crane__item crane-weight"></li>
-      <li class="crane__item crane-cabin"></li>
-      <li class="crane__item crane-arm"></li>
-    </ul>
-  </section>
-</main>
- 
+
+    <div id="pantalla-carga">
+        <div class="circulo-carga">&nbsp;</div>
+        <h4><b>&nbsp;&nbsp;Loading...</b></h4>
+    </div>
+    <div id="bb0" style="display: none;"></div>
+
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '404error.html', true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                setTimeout(function() {
+                    document.getElementById('pantalla-carga').classList.add('oculto');
+                }, 1500);
+                document.getElementById('bb0').innerHTML = xhr.responseText;
+                document.getElementById('bb0').style.display = 'block';
+            }
+        };
+        xhr.send();
+    </script>
 </body>
 </html>
