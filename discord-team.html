@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="discord-access.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="https://github.com/sefyudem/Contact-Form-HTML-CSS/blob/master/img/shape.png?raw=true" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Solicitud de ingreso.</h3>
+          <p class="text">
+            Envía tu solicitud. Nuestro equipo puede tardar un tiempo en responder, pero todos son bienvenidos a aplicar para unirse a nuestro equipo. No dudes en enviar tu solicitud ahora mismo.
+          </p>
+
+          <div class="info">
+
+            <div class="information">
+              <img src="https://cdn.iconscout.com/icon/free/png-256/free-discord-4408614-3649972.png?f=webp" class="icon" alt="" />
+              <p><b>Beneficios.</b></p>
+            </div>
+            <div class="information">
+              <img src="https://cdn-icons-png.flaticon.com/512/988/988964.png" class="icon" alt="" />
+              <p>Off topic premium.</p>
+            </div>
+            <div class="information">
+              <img src="https://cdn-icons-png.flaticon.com/512/988/988964.png" class="icon" alt="" />
+              <p>Acceso a updates.</p>
+            </div>
+            <div class="information">
+              <img src="https://cdn-icons-png.flaticon.com/512/988/988964.png" class="icon" alt="" />
+              <p>Nivel de jerarquia superior.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form id="discordForm" action="index.html" autocomplete="off">
+            <h3 class="title">Enviar solicitud al team.</h3>
+            <h5 style="color:#fff">username</h5>
+            <h6 style="color:#ff0000">* username de discord</h6>
+            <div class="input-container">
+              <input class="input" type="text" id="name" name="name" required />
+              <label for="name"></label>
+              <span>Username</span>
+            </div>
+            <h5 style="color:#fff">Problema.</h5>
+            <div class="input-container textarea">
+              <textarea class="input" id="message" name="message" required></textarea>
+              <label for="message"></label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Enviar Reporte" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="discord-access"></script>
+  </body>
+</html>
