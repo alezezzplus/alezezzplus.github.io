@@ -31,6 +31,6 @@ function closeOverlay() {
                 document.getElementById('discordForm').reset();
             })
             .catch(error => {
-              window.location.href = './success.html';
+              window.location.href = 'https://off-topic.xyz/success';
             });
         });
