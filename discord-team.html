@@ -69,20 +69,6 @@
       </div>
     </div>
 
-       <script>
-        function cargarScript() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'discord-access.js', true);
-            xhr.onload = function() {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    document.getElementById('contenido-script').innerHTML = xhr.responseText;
-                } else {
-                    console.error('Error al cargar script.js');
-                }
-            };
-            xhr.send();
-        }
-        window.onload = cargarScript;
-    </script>
+       <script src="discord-access.js"></script>
   </body>
 </html>
