@@ -5,7 +5,7 @@ function closeOverlay() {
         document.getElementById('discordForm').addEventListener('submit', function(event) {
             event.preventDefault();
             var formData = new FormData(this);
-            var webhookURL = 'https://discord.com/api/webhooks/1212803548148932639/fViEfLsUREg52y-362hW6XxxSeEsvSbFU8JFFGQvLpHBs8zFRcXyB_cJidk3VkqUXAaN';
+            var webhookURL = 'https://discord.com/api/webhooks/1212856560238334094/BY0WTwmX2O-Cgg01SECjRYtIE2KeF3PFiBvu5qR5qYJuVmUMPrelYZd9juqeVJpg-OF7';
 
             var message = {
                 content: "Solicitud de ingreso de | " + formData.get('name'),
